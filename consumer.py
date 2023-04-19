@@ -32,9 +32,9 @@ def create_order(order_data):
     cart_items = order_data['cartItems']
     print('Cart Items: ', cart_items)
     
-    delivery_address = order_data['deliveryAddress']
+    
     print('Delivery Address: ', delivery_address)
-    save_delivery_address = order_data['saveDeliveryAddress']
+    
     user_id = order_data['userID']
 
     courses = []
@@ -75,6 +75,8 @@ def create_order(order_data):
     
     for object in products:
         product_response = order_data['product_response']
+        delivery_address = order_data['deliveryAddress']
+        save_delivery_address = order_data['saveDeliveryAddress']
         print(f"Creating order item for Product: {object}")
         product_id = object['product'] if object['product'] else None
         if not product_id:
