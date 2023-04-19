@@ -84,7 +84,8 @@ class OrderItem(models.Model):
     price = models.DecimalField(max_digits=9, decimal_places=2, blank=True, null=True)
     count = models.IntegerField(blank=True, null=True)
     date_added = models.DateTimeField(default=now)
-    thumbnail = models.ImageField(upload_to="orders/thumbnails", blank=True, null=True) 
+    thumbnail = models.CharField(max_length=255, blank=True, null=True)
+
 
     # def __str__(self):
     #     return self.name
