@@ -30,11 +30,7 @@ def create_order(order_data):
     print('Order Data: ',order_data)
     try:
         cart_items = order_data['cartItems']
-        print('Cart Items: ', cart_items)
-        
-        
-        print('Delivery Address: ', delivery_address)
-        
+        print('Cart Items: ', cart_items)        
         user_id = order_data['userID']
 
         courses = []
